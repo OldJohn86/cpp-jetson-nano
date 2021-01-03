@@ -1,0 +1,36 @@
+
+# https://blog.csdn.net/weixin_45709671/article/details/108909668
+
+# 关于CUDA的环境变量导入
+# sudo gedit ~/.bashrc
+
+# export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+# export PATH=/usr/local/cuda/bin:$PATH
+
+# source ~/.bashrc
+# nvcc -V 
+
+# 安装 torch1.7 在命令行执行
+# sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+# pip3 install Cython
+# pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
+
+# sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+
+# git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision
+# or
+# git clone --branch v0.8.1 https://gitee.com/zero-one-game/vision torchvision   
+# 鉴于国内网络环境，博主提供gitee码云加速下载，直接使用github会因出现网络问题而无法进行
+# 这行命令是将源代码下载到了用户目录下的torchvision，如果torchvision已经存在，需要删除，如果提示permission denied
+#命令行使用sudo su 进入管理员模式，  执行 rm -r torchvision ,或者也可以自行查找更安全的删除方法
+
+# cd torchvision   
+#进入用户目录下的torchvision，执行源代码编译工作，需要一定的时间，大概十多分钟
+
+# export BUILD_VERSION=0.8.1
+# sudo python3 setup.py install
+# cd ../  # attempting to load torchvision from build dir will result in import error
+
+# pip3 install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
+
