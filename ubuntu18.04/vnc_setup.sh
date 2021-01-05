@@ -18,6 +18,7 @@ gsettings set org.gnome.Vino authentication-methods "['vnc']"
 gsettings set org.gnome.Vino vnc-password $(echo -n '1q2w3e4R'|base64)
 
 export DISPLAY=:0
+xrandr --fb 1920x1080
 /usr/lib/vino/vino-server --display=:0 &> /tmp/vnc.log &
 
 # nmcli connection show
