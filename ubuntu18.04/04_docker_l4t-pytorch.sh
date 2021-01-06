@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# https://ngc.nvidia.com/catalog/containers/nvidia:l4t-base
+# https://ngc.nvidia.com/catalog/containers/nvidia:l4t-pytorch
 
-docker pull nvcr.io/nvidia/l4t-base:r32.4.4
+docker pull nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py3
 
 # Allow containers to communicate with Xorg
-sudo xhost +si:localuser:root
-sudo docker run -it --rm --net=host --runtime nvidia  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-base:r32.4.4
+# sudo xhost +si:localuser:root
+# sudo docker run -it --rm --net=host --runtime nvidia  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-base:r32.4.4
 # sudo docker run --runtime nvidia --network host -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-base:r32.3.1
 
 # root@nano:/# apt-get update && apt-get install -y --no-install-recommends make g++
