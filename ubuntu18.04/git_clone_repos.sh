@@ -15,11 +15,13 @@ git clone git@github.com:OldJohn86/installRealSenseSDK.git
 # 3. Install RealSenseROS
 git clone git@github.com:OldJohn86/installRealSenseROS-1.git
 
+# 4. Install jetson-utils
+git clone git@github.com:OldJohn86/jetsonUtilities.git
 
-# 4. Install jetson-gpio
+# 5. Install jetson-gpio
 git clone git@github.com:OldJohn86/jetson-gpio.git
 
 
-# 5. Install jetson-inference
+# 6. Install jetson-inference
 git clone git@github.com:OldJohn86/jetson-inference.git
 
