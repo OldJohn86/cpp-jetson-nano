@@ -1,0 +1,19 @@
+https://linuxconfig.org/ubuntu-20-04-gui-installation
+
+
+#1
+$ sudo apt update
+$ sudo apt install tasksel
+
+#2
+$ tasksel --list-tasks
+
+#3
+$ sudo tasksel install ubuntu-desktop
+
+#4
+$ reboot
+
+#5
+$ sudo systemctl set-default graphical.target
+
