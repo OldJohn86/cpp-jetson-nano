@@ -1,0 +1,62 @@
+#安装ROS melodic
+
+a. 中科大的ROS源
+
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
+
+b. 设置key
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+c. 更新一下
+
+sudo apt-get update
+
+d. 我安装的是ROS的桌面版
+
+sudo apt-get install ros-melodic-desktop
+
+可以安装桌面完整版：sudo apt-get install ros-melodic-desktop-full
+
+
+e. 解决依赖
+
+sudo apt install rospack-tools
+sudo rosdep init
+rosdep update
+
+e. 解决依赖
+
+sudo rosdep init
+rosdep update
+
+f. 添加环境变量
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+g. 安装ros的一些便利工具
+
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+h. 终端测试是否安装成功
+
+roscore
+
+没问题即安装成功。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
